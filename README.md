@@ -1,6 +1,6 @@
 # YouTube to MP3 Converter (Python + PHP)
 
-<img src="https://i.imgur.com/tb2oVy8.png" width="1000px">
+<img src="https://i.imgur.com/S2J345p.png" width="1000px">
 
 This project allows users to convert YouTube video URLs to high-quality MP3 files using Python, with PHP acting as the front-end handler. It's a lightweight, fast, and efficient solution that combines the strengths of both languages.
 
