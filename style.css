@@ -1,0 +1,255 @@
+:root {
+    --primary: #ff0000;
+    --secondary: #3a3a3a;
+    --dark: #121212;
+    --darker: #0a0a0a;
+    --light: #f4f4f4;
+    --gray: #888;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--dark);
+    color: var(--light);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.loading, .download-link, .error-message { display: none; }
+.spinner {
+    border: 4px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 4px solid #3498db;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.container {
+    max-width: 800px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 2rem 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--light);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo span {
+    color: var(--primary);
+}
+
+.logo svg {
+    margin-right: 10px;
+    fill: var(--primary);
+}
+
+.tagline {
+    font-size: 1.2rem;
+    color: var(--gray);
+    margin-bottom: 1.5rem;
+}
+
+.download-form {
+    background-color: var(--darker);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+input[type="url"] {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 2px solid var(--secondary);
+    background-color: var(--dark);
+    color: var(--light);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+input[type="url"]:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(255, 0, 0, 0.2);
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    width: 100%;
+    letter-spacing: 1px;
+}
+
+.btn:hover {
+    background-color: #e60000;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.3);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.status {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem;
+    border-radius: 8px;
+    display: none;
+}
+
+.loading {
+    display: none;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+    border: 4px solid rgba(255, 255, 255, 0.1);
+    border-left-color: var(--primary);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.download-link {
+    display: none;
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: rgba(0, 128, 0, 0.1);
+    border-radius: 8px;
+    border: 1px solid rgba(0, 128, 0, 0.3);
+}
+
+.download-link a {
+    color: #4caf50;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.error-message {
+    display: none;
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: rgba(255, 0, 0, 0.1);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 0, 0, 0.3);
+    color: #ff6666;
+}
+
+.features {
+    display: flex;
+    justify-content: space-between;
+    margin: 3rem 0;
+    text-align: center;
+}
+
+.feature {
+    flex: 1;
+    padding: 1.5rem;
+    background-color: var(--darker);
+    border-radius: 10px;
+    margin: 0 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.feature-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+.feature h3 {
+    margin-bottom: 0.5rem;
+}
+
+.feature p {
+    color: var(--gray);
+    font-size: 0.9rem;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--darker);
+    margin-top: auto;
+}
+
+footer p {
+    color: var(--gray);
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .features {
+        flex-direction: column;
+    }
+
+    .feature {
+        margin: 10px 0;
+    }
+
+    .logo {
+        font-size: 2rem;
+    }
+}
