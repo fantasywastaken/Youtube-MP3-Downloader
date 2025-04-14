@@ -12,44 +12,44 @@
         <div class="logo">
             <span>MP3 Converter Pro</span>
         </div>
-        <p class="tagline">Hızlı, kolay ve güvenilir YouTube MP3 dönüştürücü</p>
+        <p class="tagline">Fast, easy and reliable YouTube to MP3 converter</p>
     </header>
     <form id="downloadForm" method="POST" action="download.php">
         <div class="download-form">
             <div class="form-group">
-                <label for="video-url">YouTube Video URL'si</label>
+                <label for="video-url">YouTube Video URL</label>
                 <input type="url" name="video_url" id="video-url" placeholder="https://www.youtube.com/watch?v=..." required>
             </div>
-            <button type="submit" class="btn" id="download-btn">İndir</button>
+            <button type="submit" class="btn" id="download-btn">Download</button>
             <div class="loading">
                 <div class="spinner"></div>
-                <p>İndirme hazırlanıyor, lütfen bekleyin...</p>
+                <p>Download is being prepared, please wait...</p>
             </div>
             <div class="error-message">
-                <p>Hata: İndirme işlemi sırasında bir sorun oluştu.</p>
+                <p>Error: A problem occurred during the download process.</p>
             </div>
         </div>
     </form>
     <div class="features">
         <div class="feature">
             <div class="feature-icon">⚡</div>
-            <h3>Hızlı Dönüşüm</h3>
-            <p>Videolarınızı saniyeler içinde yüksek kaliteli MP3'e dönüştürün</p>
+            <h3>Fast Transformation</h3>
+            <p>Convert your videos to high quality MP3 in seconds</p>
         </div>
         <div class="feature">
             <div class="feature-icon">🔒</div>
-            <h3>Güvenli</h3>
-            <p>Gizliliğiniz bizim için önemli, verileriniz güvende</p>
+            <h3>Safe</h3>
+            <p>Your privacy is important to us, your data is safe</p>
         </div>
         <div class="feature">
             <div class="feature-icon">💯</div>
-            <h3>Yüksek Kalite</h3>
-            <p>320kbps yüksek kaliteli MP3 çıktısı</p>
+            <h3>High Quality</h3>
+            <p>320kbps high quality MP3 output</p>
         </div>
     </div>
 </div>
 <footer>
-    <p>© 2025 YouTube MP3 İndirici. Tüm hakları saklıdır.</p>
+    <p>© 2025 YouTube MP3 Downloader. All rights reserved.</p>
 </footer>
 <script>
     document.getElementById('downloadForm').addEventListener('submit', async function(e) {
