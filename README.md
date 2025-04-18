@@ -9,6 +9,7 @@ This project allows users to convert YouTube video URLs to high-quality MP3 file
 ## 📌 How It Works
 
 ### 1. FFmpeg Setup
+
 - Download the following FFmpeg files: `ffmpeg.exe`, `ffplay.exe`, and `ffprobe.exe`.
 - Move them into the `C:\Program Files\ffmpeg` directory.
 - Open *Environment Variables* settings on your system.
@@ -19,11 +20,13 @@ This project allows users to convert YouTube video URLs to high-quality MP3 file
 ---
 
 ### 2. Placing Python Script
+
 - Move the provided Python script into the same directory as your `index.php` file.
 
 ---
 
 ### 3. Workflow
+
 - When a user submits a YouTube URL through the `index.php` form, it triggers the Python script.
 - The Python script uses `yt_dlp` to download the video and extract the best quality audio.
 - FFmpeg then converts the downloaded audio into an MP3 file with the highest possible quality.
@@ -31,6 +34,7 @@ This project allows users to convert YouTube video URLs to high-quality MP3 file
 ---
 
 ### 4. Python Dependency
+
 The only Python library required is:
 ```python
 from yt_dlp import YoutubeDL
@@ -44,6 +48,7 @@ pip install yt-dlp
 ---
 
 ### 5. No Additional Configuration Needed
+
 - The system is designed to work out of the box as long as:
 - FFmpeg is properly installed and added to PATH
 - Python is installed
@@ -53,4 +58,5 @@ pip install yt-dlp
 ---
 
 ### ⚠️ Disclaimer
+
 This project has been developed for educational purposes only. Unauthorized system access is strictly prohibited and constitutes a criminal offense. The developer cannot be held responsible for any misuse.
